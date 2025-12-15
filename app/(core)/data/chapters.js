@@ -918,5 +918,114 @@ function draw(dt){
       }
    ]
       }
-   }
-];
+   },
+    {
+    id: 7, // A new, unique ID
+    name: "Projectile Motion",
+    desc: "A simulation of a projectile's trajectory under gravity.",
+    link: "/simulations/ProjectileMotion", // This MUST match your folder name
+    tags: [
+      TAGS.MEDIUM,
+      TAGS.PHYSICS,
+      TAGS.GRAVITY,
+      // You can add TAGS.KINEMATICS if it exists in tags.js
+    ],
+
+    theory: {
+      sections: [
+        {
+          title: "Introduction",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "This simulation demonstrates projectile motion, which is the path (or trajectory) an object follows when launched near the Earth's surface, moving under the constant force of gravity."
+            }
+          ]
+        },
+        {
+          title: "Key Concepts",
+          blocks: [
+            {
+              type: "paragraph",
+              text: "The motion is broken into two independent components: horizontal (x-axis) and vertical (y-axis)."
+            },
+            {
+              type: "list",
+              ordered: true,
+              items: [
+                "Horizontal Motion (X-axis): The object moves at a constant velocity, as there is no horizontal force (ignoring air resistance).",
+                "Vertical Motion (Y-axis): The object experiences a constant downward acceleration 'g' (e.g., 9.81 m/s²)."
+              ]
+            }
+          ]
+        },
+        {
+          title: "Kinematic Equations",
+          blocks: [
+            {
+              type: "subheading",
+              text: "Horizontal Position"
+            },
+            {
+              type: "formula",
+              latex: "x(t) = v_{0x} t \\quad \\text{where} \\quad v_{0x} = v_0 \\cos(\\theta)"
+            },
+            {
+              type: "subheading",
+              text: "Vertical Position"
+            },
+            {
+              type: "formula",
+              latex: "y(t) = v_{0y} t + \\frac{1}{2} g t^2 \\quad \\text{where} \\quad v_{0y} = v_0 \\sin(\\theta)"
+            },
+            {
+              type: "note",
+              text:"Note: In our simulation's y-down coordinate system, 'g' is positive and the initial y-velocity is negative."
+            }
+          ]
+        },
+        {
+          title: "Simulation Parameters",
+          blocks: [
+            {
+              type: "table",
+              columns: [
+                "Parameter",
+                "Description",
+                "Example Value"
+              ],
+              data: [
+                {
+                  "Parameter": "Initial Velocity (v₀)",
+                  "Description": "The speed at which the projectile is launched.",
+                  "Example Value": "50 m/s"
+                },
+                {
+                  "Parameter": "Angle (θ)",
+                  "Description": "The launch angle relative to the horizontal.",
+                  "Example Value": "45°"
+                },
+                {
+                  "Parameter": "Gravity (g)",
+                  "Description": "The constant downward acceleration.",
+                  "Example Value": "9.81 m/s²"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          title: "Tips and Tricks",
+          blocks: [
+            {
+              type: "callout",
+              calloutType: "info",
+              title: "Did you know?",
+              text: "A launch angle of 45° (in a vacuum, on a flat surface) will always give the maximum horizontal range."
+            }
+          ]
+        }
+      ]
+    }
+  }
+]; 
